@@ -1,5 +1,5 @@
-export const ProductsMap = ({product}) => {
+export const ProductsMap = () => {
     return (
-        <div>{productsInfo}</div>
+        <div></div>
     )
 }
