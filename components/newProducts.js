@@ -24,12 +24,12 @@ export const NewProducts = ({ ProductsList }) => {
                   <Slider {...settings}>
                     {product.images.map((image, index) => (
                       <div key={index}>
-                        <img src={image} alt={`${product.name} - ${index}`} />
+                        <img  className="transform transition-transform duration-300  hover:scale-150 " src={image} alt={`${product.name} - ${index}`} />
                       </div>
                     ))}
                   </Slider>
                 ) : (
-                  <img src={product.images[0]} alt={product.name} />
+                  <img className="transform transition-transform duration-300 hover:scale-150" src={product.images[0]} alt={product.name} />
                 )}
               </div>
               <div className="py-[3px] px-[3px]">

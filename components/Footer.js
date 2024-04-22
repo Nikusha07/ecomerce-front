@@ -32,7 +32,7 @@ export const Footer = () => {
             </div>
             <style jsx>{`
                 footer {
-                    animation: fadeIn 1s;
+                    animation: fadeIn 1.5s;
                 }
 
                 @keyframes fadeIn {
