@@ -71,7 +71,6 @@ export const NewProducts = ({ ProductsList }) => {
           </div>
         ))}
       </section>
-      {/* Use the Cart component */}
       <Cart cart={cart} removeFromCart={removeFromCart} totalPrice={totalPrice} />
     </>
   );
