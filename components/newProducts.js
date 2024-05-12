@@ -23,6 +23,13 @@ export const NewProducts = ({ ProductsList }) => {
   const saveCartToLocalStorage = () => {
     localStorage.setItem("cart", JSON.stringify(cart));
   };
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
 
   const loadCartFromLocalStorage = () => {
     const savedCart = localStorage.getItem("cart");
@@ -47,7 +54,7 @@ export const NewProducts = ({ ProductsList }) => {
             <div className="bg-[#d9ceff] w-[100%] h-[100%] flex flex-col justify-between p-[5px] rounded-md">
               <div>
                 <h1 className="text-[14px] font-[600] text-[#6b04fd] roboto-bold">{product.title}</h1>
-                <button onClick={() => addToCart(product)}>Add to Cart</button>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded-lg shadow-md transition duration-300 ease-in-out" onClick={() => addToCart(product)}>Add to Cart</button>
                 {product.images.length > 1 ? (
                   <Slider {...settings}>
                     {product.images.map((image, index) => (
